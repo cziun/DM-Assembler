@@ -1,6 +1,4 @@
-# Multi-granularity Score-based Generative Framework Enables Efficient Inverse Design of Complex Organics
-
-The paper is available at https://arxiv.org/abs/2409.07912. 
+# Leveraging Domain Motif Assembler for Multi-objective, Multi-domain and Explainable Molecular Design
 
 ## Requirement
 
