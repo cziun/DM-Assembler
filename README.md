@@ -83,6 +83,43 @@ python preprocess.py --data '/path/to/your/dataset' --vocab_path '/path/to/vocab
 
 where `arr_x_path` and `arr_adj_path` represent the path of motif compositions and connections, respectively, and `test_nx_path` is the path of the test fragment-level graphs. 
 
+## 3. Coarse-grained Training
+
+The configuration is provided in the `config/` directory in `yaml` format. To train the coarse-grained score-based model for motif-connection generation, first modify `config/${dataset}.yaml`. Then, you can run the following command:
+
+```
+python main.py --type train --config ${train_config} --condition '1syh score'
+```
+
+After running, you will get the `.ckpt` for a model, which is used for motif-connection generation.
+
+## 4. Fine-grained Training
+
+To train the fine-grained model for the assembly of complete molecules, you can run the following command:
+
+```
+python trainer_bond_recovery.py --config sample_${dataset} --vocab_path '/path/to/vocab' --train_set '/path/to/train' --valid_set '/path/to/valid' --test_set '/path/to/test' --condition 'multi-objective value'
+```
+
+After running, you will get the corresponding `.ckpt` file.
+
+## 5. Molecule Sampling
+
+To generate complete molecules using the above trained multi-granularity model, run the following command:
+
+```
+python main.py --type sample --config sample_${dataset} --ckpt_train_path '/path/to/coarse/ckpt' --condition '4lde score' --ckpt_bond_path '/path/to/fine/ckpt' --vocab '/path/to/vocab' --output '/path/to/mol/output'
+```
+
+After running, you will get a text file of generated molecules in `output`.
+
+
+
+
+
+
+
+
 
 
 
