@@ -3,9 +3,9 @@
 ![framework](figure/framework.png)
 
 
+# Requirement
 
-
-## Requirement
+## Molecule Generation
 
 First, create a virtual environment:
 
@@ -25,4 +25,13 @@ Finally, install pytorch_geometric:
 pip install pyg-lib torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
 pip install torch-geometric
 ```
+
+## Property Simulation
+
+
+
+
+
+
+
 
