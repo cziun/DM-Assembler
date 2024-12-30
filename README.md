@@ -28,6 +28,16 @@ pip install torch-geometric
 
 ## Property Simulation
 
+For specific environment configuration, code implementation and detailed operational processes of molecular property simulation, please refer to https://github.com/aspuru-guzik-group/Tartarus. This link contains complete environment installation guides and molecular simulation example code.
+
+# Model 
+
+
+
+
+
+
+
 
 
 
