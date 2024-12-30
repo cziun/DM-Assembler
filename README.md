@@ -103,7 +103,7 @@ python trainer_bond_recovery.py --config sample_${dataset} --vocab_path '/path/t
 
 After running, you will get the corresponding `.ckpt` file.
 
-## 5. Molecule Sampling
+# Molecule Sampling
 
 To generate complete molecules using the above trained multi-granularity model, run the following command:
 
