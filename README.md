@@ -114,9 +114,16 @@ python main.py --type sample --config sample_${dataset} --ckpt_train_path '/path
 After running, you will get a text file of generated molecules in `output`.
 
 
+# Property Simulation
 
+You can use the following command to get the properties of a molecule:
 
+```
+cd simulation
+python example.py --dataset 'dtp' --smiles 'OC1=C2N=COC2=CC2=C1OC=C2'
+```
 
+where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'.
 
 
 
