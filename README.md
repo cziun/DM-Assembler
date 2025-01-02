@@ -126,13 +126,13 @@ python example.py --dataset 'dtp' --smiles 'OC1=C2N=COC2=CC2=C1OC=C2'
 where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'.
 
 
+# Acknowledgements
 
+We would like to express our gratitude to the related projects, research and development personnel:
 
-
-
-
-
-
+1. https://github.com/aspuru-guzik-group/Tartarus
+2. https://github.com/THUNLP-MT/PS-VAE
+3. https://github.com/harryjo97/GDSS
 
 
 
