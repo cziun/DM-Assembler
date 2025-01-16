@@ -1,4 +1,7 @@
-# DM-Assembler: Leveraging Domain Motif Assembler for Multi-objective, Multi-domain and Explainable Molecular Design
+<h2 align="center"> DM-Assembler: Leveraging Domain Motif Assembler for Multi-objective, Multi-domain and Explainable Molecular Design</a></h2>
+<h5 align="center">
+
+
 
 ![framework](figure/framework.png)
 
