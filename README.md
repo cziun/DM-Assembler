@@ -64,7 +64,7 @@ chmod 777 tartarus/data/smina
 
 ## Model Training
 
-> **Note:** These codes run in the environment `gen`.
+> **Note:** The codes for model training and molecule sampling run in the environment `gen`.
 
 ### 1. Vocab Construction
 
@@ -81,10 +81,10 @@ where `vocab_size` can be changed according to your need. After running, you wil
 You can use the following command to process the atom-level data into motif-level data using the vocabulary we built:
 
 ```
-python preprocess.py --data '/path/to/your/dataset' --vocab_path '/path/to/vocab' --arr_x_path '/path/to/x' --arr_adj_path '/path/to/adj' --valid_idx_path '/path/to/valid_idx' --test_nx_path '/path/to/test_nx'
+python preprocess.py --data '/path/to/your/dataset' --vocab_path '/path/to/vocab' --arr_x_path '/path/to/x' --arr_adj_path '/path/to/adj'
 ```
 
-where `arr_x_path` and `arr_adj_path` represent the path of motif compositions and connections, respectively, and `test_nx_path` is the path of the test fragment-level graphs. 
+where `arr_x_path` and `arr_adj_path` represent the path of motif compositions and connections, respectively. 
 
 ### 3. Coarse-grained Training
 
