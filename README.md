@@ -130,6 +130,10 @@ python example.py --dataset 'dtp' --smiles 'OC1=C2N=COC2=CC2=C1OC=C2'
 
 where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'.
 
+## Checkpoints
+
+The checkpoints for my model can be found at the following link: [Checkpoints](). Please download it to continue with the model reproduction or evaluation.
+
 
 ## Acknowledgements
 
