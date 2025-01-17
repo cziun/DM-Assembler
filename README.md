@@ -134,7 +134,7 @@ where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'. The foll
 
 ## Construction of Domain-Specific Datasets
 
-The new domain-specific datasets we have constructed can be obtained [here](https://github.com/cziun/DM-Assembler/data/new).
+The new domain-specific datasets we have constructed can be obtained [here](https://github.com/cziun/DM-Assembler/tree/main/data/new).
 
 ## Checkpoints
 
