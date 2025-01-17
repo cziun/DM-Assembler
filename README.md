@@ -12,20 +12,20 @@
 
 First, create a virtual environment and activate the environment:
 
-```
+```sh
 conda create -n gen python=3.7
 conda activate gen
 ```
 
 Then, install the packages:
 
-```
+```sh
 pip install -r requirements.txt
 ```
 
 Finally, install pytorch_geometric:
 
-```
+```sh
 pip install pyg-lib torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
 pip install torch-geometric
 ```
@@ -34,7 +34,7 @@ pip install torch-geometric
 
 First, create a virtual environment using the provided environment configuration and activate the environment:
 
-```
+```sh
 cd simulation
 conda env create -f environment.yml
 conda activate tartarus
@@ -42,21 +42,21 @@ conda activate tartarus
 
 Second, set environment variables:
 
-```
+```sh
 export XTBHOME=$CONDA_PREFIX
 source $CONDA_PREFIX/share/xtb/config_env.bash
 ```
 
 Optionally, you can configure the environment variables to be set automatically when you activate this environment:
 
-```
+```sh
 echo "export XTBHOME=$CONDA_PREFIX" > $CONDA_PREFIX/etc/conda/activate.d/env.sh
 echo "source $CONDA_PREFIX/share/xtb/config_env.bash" >> $CONDA_PREFIX/etc/conda/activate.d/env.sh
 ```
 
 Finally, ensure that docking task executables have the correct permissions:
 
-```
+```sh
 chmod 777 tartarus/data/qvina
 chmod 777 tartarus/data/smina
 ```
@@ -70,7 +70,7 @@ chmod 777 tartarus/data/smina
 
 You can use the following command to construct the motif vocabulary:
 
-```
+```sh
 python vocab_generation.py --data '/path/to/your/dataset' --vocab_size size_of_the_vocabulary --vocab_path '/path/to/vocab'
 ```
 
@@ -80,7 +80,7 @@ where `vocab_size` can be changed according to your need. After running, you wil
 
 You can use the following command to process the atom-level data into motif-level data using the vocabulary we built:
 
-```
+```sh
 python preprocess.py --data '/path/to/your/dataset' --vocab_path '/path/to/vocab' --arr_x_path '/path/to/x' --arr_adj_path '/path/to/adj'
 ```
 
@@ -90,7 +90,7 @@ where `arr_x_path` and `arr_adj_path` represent the path of motif compositions a
 
 The configuration is provided in the `config/` directory in `yaml` format. To train the coarse-grained score-based model for motif-connection generation, first modify `config/${dataset}.yaml`. Then, you can run the following command:
 
-```
+```sh
 python main.py --type train --config ${train_config}
 ```
 
@@ -100,7 +100,7 @@ After running, you will get the `.ckpt` for a model, which is used for motif-con
 
 To train the fine-grained model for the assembly of complete molecules, you can run the following command:
 
-```
+```sh
 python trainer_bond_recovery.py --config sample_${dataset} --vocab_path '/path/to/vocab' --train_set '/path/to/train' --valid_set '/path/to/valid' --test_set '/path/to/test'
 ```
 
@@ -110,11 +110,20 @@ After running, you will get the corresponding `.ckpt` file.
 
 To generate complete molecules using the above trained multi-granularity model, run the following command:
 
-```
+```sh
 python main.py --type sample --config sample_${dataset} --ckpt_train_path '/path/to/coarse/ckpt' --ckpt_bond_path '/path/to/fine/ckpt' --vocab '/path/to/vocab' --output '/path/to/mol/output'
 ```
 
 After running, you will get a text file of generated molecules in `output`.
+
+## Conditional Sampling Strategies
+
+1. Property-aware Filtering
+
+  The first strategy employs a property-aware filter based on the Uni-Mol model, which assesses generated molecules in terms of their alignment with target properties
+
+2. Zero-shot Graph Prompting
+
 
 
 ## Property Simulation
@@ -123,7 +132,7 @@ After running, you will get a text file of generated molecules in `output`.
 
 You can use the following command to get the properties of a molecule:
 
-```
+```sh
 cd simulation
 python example.py --dataset 'dtp' --smiles 'OC1=C2N=COC2=CC2=C1OC=C2'
 ```
