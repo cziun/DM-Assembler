@@ -120,11 +120,20 @@ After running, you will get a text file of generated molecules in `output`.
 
 1. Property-aware Filtering
 
-  The first strategy employs a property-aware filter based on the Uni-Mol model, which assesses generated molecules in terms of their alignment with target properties
+   This strategy employs a property-aware filter based on the [Uni-Mol](https://github.com/deepmodeling/Uni-Mol), which assesses generated molecules in terms of their alignment with target properties. The checkpoints for the models trained on our four datasets can be download [here](https://drive.google.com/drive/folders/1NCvBiymP4eDsNmMcbymNj7oLTjBbD3vt?usp=drive_link).
 
 2. Zero-shot Graph Prompting
 
-
+   This strategy injects domain-specific structural motifs, which extracted from the most frequent structural features in high-quality molecules or combinations of motifs from specific molecules, into the diffusion process to steer molecular generation towards the desired property space. For example, you can modify the function `prior_sampling` in file `/models/sde.py` as follows:
+   ```python
+   x = torch.randn(*shape)
+   one_hot = torch.zeros(1, shape[2])
+   one_hot[0, N] = 1
+   one_hot = one_hot.expand(shape[0], -1)
+   x[:, 0, :] = one_hot
+   return x
+   ```
+   The modified code above represents fixing one node of the samples as the motif prompt N. 
 
 ## Property Simulation
 
@@ -147,8 +156,7 @@ The new domain-specific datasets we have constructed can be obtained [here](http
 
 ## Checkpoints
 
-The checkpoints for my model can be found at the following link: [Checkpoints](https://drive.google.com/drive/folders/1NCvBiymP4eDsNmMcbymNj7oLTjBbD3vt?usp=drive_link). Please download it to continue with the model reproduction or evaluation.
-
+The checkpoints for our trained model can be found at the following link: [Checkpoints](https://drive.google.com/drive/folders/1NCvBiymP4eDsNmMcbymNj7oLTjBbD3vt?usp=drive_link). Please download it to continue with the model reproduction or evaluation.
 
 ## Acknowledgements
 
@@ -157,13 +165,4 @@ We would like to express our gratitude to the related projects, research and dev
 1. https://github.com/aspuru-guzik-group/Tartarus
 2. https://github.com/THUNLP-MT/PS-VAE
 3. https://github.com/harryjo97/GDSS
-
-
-
-
-
-
-
-
-
 
