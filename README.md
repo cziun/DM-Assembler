@@ -119,6 +119,8 @@ After running, you will get a text file of generated molecules in `output`.
 
 ## Property Simulation
 
+> **Note:** The codes for molecular property simulation run in the environment `tartarus`.
+
 You can use the following command to get the properties of a molecule:
 
 ```
