@@ -132,7 +132,7 @@ where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'.
 
 ## Checkpoints
 
-The checkpoints for my model can be found at the following link: [Checkpoints](). Please download it to continue with the model reproduction or evaluation.
+The checkpoints for my model can be found at the following link: [Checkpoints](https://drive.google.com/drive/folders/1NCvBiymP4eDsNmMcbymNj7oLTjBbD3vt?usp=drive_link). Please download it to continue with the model reproduction or evaluation.
 
 
 ## Acknowledgements
