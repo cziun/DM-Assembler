@@ -120,7 +120,7 @@ After running, you will get a text file of generated molecules in `output`.
 
 1. Property-aware Filtering
 
-   This strategy employs a property-aware filter based on the [Uni-Mol](https://github.com/deepmodeling/Uni-Mol), which assesses generated molecules in terms of their alignment with target properties. The checkpoints for the models trained on our four datasets can be download [here](https://drive.google.com/drive/folders/1NCvBiymP4eDsNmMcbymNj7oLTjBbD3vt?usp=drive_link).
+   This strategy employs a property-aware filter based on the [Uni-Mol](https://github.com/deepmodeling/Uni-Mol), which assesses generated molecules in terms of their alignment with target properties.
 
 2. Zero-shot Graph Prompting
 
