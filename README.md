@@ -3,7 +3,7 @@
 
 ## Overview
 
-![framework](figure/framework.png)
+![framework](figure/framework.jpg)
 
 
 ## Installation
