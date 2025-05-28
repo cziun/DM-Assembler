@@ -148,7 +148,7 @@ python example.py --dataset 'dtp' --smiles 'OC1=C2N=COC2=CC2=C1OC=C2'
 
 where the candidate of dataset are 'hce', 'gdb13', 'snb60k', and 'dtp'. The following are examples of DM-Assembler-generated molecules for each property value corresponding to the four datasets:
 
-![framework](figure/mol.png)
+![framework](figure/mol.jpg)
 
 ## Construction of Domain-Specific Datasets
 
