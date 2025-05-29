@@ -71,10 +71,10 @@ chmod 777 tartarus/data/smina
 You can use the following command to construct the motif vocabulary:
 
 ```sh
-python vocab_generation.py --data '/path/to/your/dataset' --vocab_size size_of_the_vocabulary --vocab_path '/path/to/vocab'
+python vocab_generation.py --data '/path/to/your/dataset' --vocab_size size_of_the_vocabulary --vocab_path '/path/to/vocab' --weight N
 ```
 
-where `vocab_size` can be changed according to your need. After running, you will get a text file of vocabulary in which the lines record the mined motif. Each row consists of three items: the SMILES of the motif, the number of atoms in the motif, and the frequency of the motif in the dataset. 
+where `vocab_size` and `weight` (between 0 and 1) can be changed according to your need. After running, you will get a text file of vocabulary in which the lines record the mined motif. Each row consists of three items: the SMILES of the motif, the number of atoms in the motif, and the property-aware score of the motif in the dataset. 
 
 ### 2. Data Preprocess
 
