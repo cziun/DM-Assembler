@@ -9,13 +9,13 @@ from rdkit.Chem.rdchem import BondType
 
 
 # hce   
-MAX_VALENCE = {'C':4, 'N':3, 'O':2, 'S':6, 'Se': 2, 'Si':4}
+# MAX_VALENCE = {'C':4, 'N':3, 'O':2, 'S':6, 'Se': 2, 'Si':4}
 # gdb13 
 # MAX_VALENCE = {'C':4, 'N':3, 'O':2, 'S':6}
 # reactivity
 # MAX_VALENCE = {'Br':1, 'C':4, 'Cl':1, 'F':1, 'I':1, 'N':3, 'O':2, 'S':6}
 # dtp
-# MAX_VALENCE = {'Ga': 3, 'Sb': 5, 'F': 1, 'Bi': 5, 'In': 3, 'Se': 2, 'P': 5, 'B': 3, 'Ge': 4, 'Br': 1, 'N': 3, 'S': 6, 'Cl': 1, 'Tl': 3, 'O': 2, 'Te': 6, 'Hg': 2, 'As': 5, 'C': 4, 'Pb': 4}
+MAX_VALENCE = {'Ga': 3, 'Sb': 5, 'F': 1, 'Bi': 5, 'In': 3, 'Se': 2, 'P': 5, 'B': 3, 'Ge': 4, 'Br': 1, 'N': 3, 'S': 6, 'Cl': 1, 'Tl': 3, 'O': 2, 'Te': 6, 'Hg': 2, 'As': 5, 'C': 4, 'Pb': 4}
 
 Bond_List = [None, BondType.SINGLE, BondType.DOUBLE, BondType.TRIPLE]
 
