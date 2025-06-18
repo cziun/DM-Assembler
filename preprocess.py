@@ -97,10 +97,10 @@ def preprocess(fname, vocab_path, max, tokenizer, arr_x_path, arr_adj_path):
 def parse():
     """parse command"""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data/hce/hce.smiles')
-    parser.add_argument('--vocab_path', type=str, default='preprocess/hce/vocab.txt')
-    parser.add_argument('--arr_x_path', type=str, default='preprocess/hce/arr_x.npy')
-    parser.add_argument('--arr_adj_path', type=str, default='preprocess/hce/arr_adj.npy')
+    parser.add_argument('--data', type=str, default='data/dtp/dtp.smiles')
+    parser.add_argument('--vocab_path', type=str, default='preprocess/dtp/vocab.txt')
+    parser.add_argument('--arr_x_path', type=str, default='preprocess/dtp/arr_x.npy')
+    parser.add_argument('--arr_adj_path', type=str, default='preprocess/dtp/arr_adj.npy')
 
     return parser.parse_args()
 
