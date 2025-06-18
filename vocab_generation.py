@@ -272,9 +272,9 @@ class Tokenizer:
 def parse():
     """parse command"""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str)
+    parser.add_argument('--data', type=str, default='data/dtp/dtp.csv')
     parser.add_argument('--vocab_size', type=int, help='Length of vocab')
-    parser.add_argument('--vocab_path', type=str, help='Path to save vocab')
+    parser.add_argument('--vocab_path', type=str, default='preprocess/dtp/vocab.txt', help='Path to save vocab')
     parser.add_argument('--weight', type=float, default=1, help='Weight for frequency (1-weight for property)')
     parser.add_argument('--workers', type=int, default=16, help='Number of cpus to use')
 
