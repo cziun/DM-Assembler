@@ -32,14 +32,14 @@ def parse():
     parser.add_argument('--gpus', type=int, default=0,
                         help="cpu: -1")
     parser.add_argument('--config', type=str, required=True,
-                        help="HCE: hce or sample_hce")
+                        help="Train: dtp, Sample: sample_dtp")
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--ckpt_train_path', type=str, default='',
                         help=" The full path: ./checkpoints/{config.data.data}/{args.ckpt_train_path}.pth ")
     parser.add_argument('--ckpt_bond_path', type=str, default='',
                         help=" The full path: ./checkpoints/BondRecovery/{config.data.data}/{args.ckpt_bond_path}/best_model.ckpt ")
-    parser.add_argument('--vocab', type=str, default="preprocess/hce/vocab.txt")
-    parser.add_argument('--output', type=str, default="output_hce",
+    parser.add_argument('--vocab', type=str, default="preprocess/dtp/vocab.txt")
+    parser.add_argument('--output', type=str, default="output_dtp",
                         help=" The full path: output/{args.output}.txt ")
 
     return parser.parse_args()
