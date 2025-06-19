@@ -76,6 +76,8 @@ python vocab_generation.py --data '/path/to/your/dataset' --vocab_size size_of_t
 
 where `vocab_size` and `weight` (between 0 and 1) can be changed according to your need. After running, you will get a text file of vocabulary in which the lines record the mined motif. Each row consists of three items: the SMILES of the motif, the number of atoms in the motif, and the property-aware score of the motif in the dataset. 
 
+Note: `MAX_VALENCE` in the `utils/mol_utils.py` file needs to be modified according to the dataset.
+
 ### 2. Data Preprocess
 
 You can use the following command to process the atom-level data into motif-level data using the vocabulary we built:
